@@ -11,9 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 const eventRoutes = require("./routes/eventRoutes");
+const authRoutes=require("./routes/authRoutes");
 
 app.use("/events",eventRoutes);
-
+app.use("/auth",authRoutes);
 
 app.get("/", async (req,res)=>{
 
